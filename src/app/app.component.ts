@@ -1,23 +1,27 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Component, } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
- 
-    CounterComponent,
-    
+    CounterComponent
   ],
+  
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-lab';
-  randomName = '';
+  initialValue: number = 0;
+  title = 'angular';
 
 
-}
+  onValueChange(event: number) {
+    console.log('New value:', event);
+
+  }
+} 
+ 
+
