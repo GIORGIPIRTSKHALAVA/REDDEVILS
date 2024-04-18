@@ -1,5 +1,10 @@
 <div>
-  <button (click)="decrement()">-</button>
-  <span>{{ count }}</span>
-  <button (click)="increment()">+</button>
+  
+  <span>მრიცხველი:{{ count }}</span>
+  <br>
+  <br>
+  <button mat-button  (click)="decrement()" style="color:white; background-color: red;">დაკლება</button>
+  <br>
+  <br>
+    <button mat-button (click)="increment()"style="color:white; background-color: green;">მომატება</button>
 </div>

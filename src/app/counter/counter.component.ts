@@ -3,11 +3,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-counter',
   standalone: true,
-  template: `
-    <button (click)="decrement()">-</button>
-    <span>{{ count }}</span>
-    <button (click)="increment()">+</button>
-  `,
+  templateUrl:'\counter.component.html',
+
+
+
   styles: []
 })
 export class CounterComponent {
@@ -15,6 +14,7 @@ export class CounterComponent {
   @Output() valueChange = new EventEmitter<number>();
 
   count = this.initialValue;
+  
 
   increment() {
     this.count++;
